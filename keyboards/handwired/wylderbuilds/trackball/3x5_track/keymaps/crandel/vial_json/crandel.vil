@@ -301,18 +301,34 @@
   "macro": [
     [
       [
-        "tap",
-        "KC_LCTRL",
+        "down",
         "KC_LSHIFT",
+        "KC_LCTRL"
+      ],
+      [
+        "tap",
         "KC_C"
+      ],
+      [
+        "up",
+        "KC_LCTRL",
+        "KC_LSHIFT"
       ]
     ],
     [
       [
-        "tap",
-        "KC_LCTRL",
+        "down",
         "KC_LSHIFT",
+        "KC_LCTRL"
+      ],
+      [
+        "tap",
         "KC_V"
+      ],
+      [
+        "up",
+        "KC_LCTRL",
+        "KC_LSHIFT"
       ]
     ],
     [
@@ -586,8 +602,8 @@
       "M2"
     ],
     [
-      "KC_L",
-      "KC_P",
+      "KC_H",
+      "KC_D",
       "KC_NO",
       "KC_NO",
       "KC_CAPSLOCK"
