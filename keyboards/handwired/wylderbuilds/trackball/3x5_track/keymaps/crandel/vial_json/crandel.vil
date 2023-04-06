@@ -67,7 +67,7 @@
         -1
       ],
       [
-        "KC_QUOTE",
+        "TD(3)",
         "KC_TAB",
         -1,
         -1,
@@ -532,10 +532,10 @@
       220
     ],
     [
-      "KC_NO",
-      "KC_NO",
-      "KC_NO",
-      "KC_NO",
+      "KC_QUOTE",
+      "KC_LBRACKET",
+      "KC_SLASH",
+      "KC_RBRACKET",
       560
     ],
     [
