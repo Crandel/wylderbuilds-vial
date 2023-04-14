@@ -41,9 +41,9 @@ void keyboard_post_init_user(void) {
                                    KC_BTN4,
                                    TAP_TAPPING_TERM };
     vial_tap_dance_entry_t td3 = { KC_QUOT,
-+                                  KC_LBRC,
-+                                  KC_SLSH,
-                            +      KC_RBRC,
+                                   KC_LBRC,
+                                   KC_SLSH,
+                                   KC_RBRC,
                                    TAP_TAPPING_TERM };
     dynamic_keymap_set_tap_dance(0, &td0); // the first value corresponds to the TD(i) slot
     dynamic_keymap_set_tap_dance(1, &td1);
