@@ -33,10 +33,10 @@
       ],
       [
         -1,
+        "KC_DELETE",
         "KC_GESC",
-        "TD(0)",
         "TD(2)",
-        "KC_DELETE"
+        "TD(0)"
       ],
       [
         "KC_J",
@@ -105,10 +105,10 @@
       ],
       [
         -1,
+        "KC_DELETE",
         "KC_GESC",
-        "TD(0)",
         "KC_PSCREEN",
-        "KC_DELETE"
+        "TD(0)"
       ],
       [
         "KC_HOME",
@@ -177,10 +177,10 @@
       ],
       [
         -1,
+        "KC_DELETE",
         "KC_GESC",
-        "TD(0)",
         "TD(2)",
-        "KC_BTN1"
+        "TD(0)"
       ],
       [
         "KC_MPRV",
@@ -250,9 +250,9 @@
       [
         -1,
         "RESET",
-        "TD(0)",
+        "KC_GESC",
         "TD(2)",
-        "KC_BTN1"
+        "TD(0)"
       ],
       [
         "KC_PSCREEN",
