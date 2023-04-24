@@ -13,18 +13,16 @@ enum layers {
 #define TO_MOS DF(MOUSE_L)
 
 
-#ifdef CONSOLE_ENABLE
-void keyboard_post_init_user(void) {
-    debug_enable=true;
-    debug_matrix=true;
-    debug_keyboard=true;
-    debug_mouse=true;
-}
-#endif
 
 #ifdef TAP_DANCE_ENABLE
 #define TAP_TAPPING_TERM 220
 void keyboard_post_init_user(void) {
+#ifdef CONSOLE_ENABLE
+    debug_enable=true;
+    debug_matrix=true;
+    debug_keyboard=true;
+    debug_mouse=true;
+#endif // CONSOLE_ENABLE
     vial_tap_dance_entry_t td0 = { TO_CLM,
                                    TO_CHR,
                                    TO_NMB,

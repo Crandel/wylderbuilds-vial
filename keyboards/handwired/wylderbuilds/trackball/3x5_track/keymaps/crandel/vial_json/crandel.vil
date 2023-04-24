@@ -618,18 +618,18 @@
       "KC_TAB"
     ],
     [
-      "KC_O",
-      "KC_I",
-      "KC_Y",
-      "KC_NO",
-      "DF(3)"
+      "KC_W",
+      "KC_F",
+      "KC_P",
+      "KC_LGUI",
+      "RESET"
     ],
     [
-      "KC_NO",
-      "KC_NO",
-      "KC_NO",
-      "KC_NO",
-      "KC_NO"
+      "KC_L",
+      "KC_U",
+      "KC_Y",
+      "KC_ENTER",
+      "RESET"
     ],
     [
       "KC_NO",
