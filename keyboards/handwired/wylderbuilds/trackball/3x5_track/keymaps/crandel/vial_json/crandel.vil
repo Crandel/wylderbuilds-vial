@@ -498,7 +498,15 @@
         "LSFT(KC_QUOTE)"
       ]
     ],
-    [],
+    [
+      [
+        "tap",
+        "KC_SCOLON",
+        "KC_W",
+        "KC_Q",
+        "KC_A"
+      ]
+    ],
     [],
     [],
     [],
@@ -632,11 +640,11 @@
       "RESET"
     ],
     [
+      "KC_SPACE",
+      "KC_ENTER",
       "KC_NO",
       "KC_NO",
-      "KC_NO",
-      "KC_NO",
-      "KC_NO"
+      "M4"
     ]
   ],
   "key_override": [
