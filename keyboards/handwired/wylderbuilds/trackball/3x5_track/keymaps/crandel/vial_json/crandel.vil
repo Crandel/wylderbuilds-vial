@@ -57,7 +57,7 @@
         "KC_H",
         "KC_COMMA",
         "KC_DOT",
-        "LSFT(KC_SLASH)"
+        "KC_SLASH"
       ],
       [
         "KC_ENTER",
@@ -80,21 +80,21 @@
         "RALT_T(KC_7)",
         "LCTL_T(KC_4)",
         "LSFT_T(KC_2)",
-        "KC_F1"
+        "KC_MINUS"
       ],
       [
-        "KC_F4",
+        "KC_BTN4",
         "KC_8",
         "KC_5",
         "KC_1",
         "KC_3"
       ],
       [
-        "KC_F3",
+        "KC_BTN3",
         "KC_9",
         "KC_6",
         "KC_0",
-        "KC_F2"
+        "KC_BTN2"
       ],
       [
         -1,
@@ -107,7 +107,7 @@
         -1,
         "KC_DELETE",
         "KC_GESC",
-        "KC_PSCREEN",
+        "KC_BTN1",
         "TD(0)"
       ],
       [
@@ -122,14 +122,14 @@
         "KC_DOWN",
         "KC_UP",
         "KC_RIGHT",
-        "KC_LCTRL"
+        "TD(1)"
       ],
       [
-        "KC_BSLASH",
-        "KC_MINUS",
-        "LSFT(KC_8)",
-        "TD(1)",
-        "KC_SLASH"
+        "KC_F1",
+        "KC_F2",
+        "KC_F3",
+        "KC_F4",
+        "KC_BSLASH"
       ],
       [
         "KC_ENTER",
@@ -139,7 +139,7 @@
         -1
       ],
       [
-        "LSFT(KC_MINUS)",
+        "KC_QUOTE",
         "KC_TAB",
         -1,
         -1,
@@ -211,7 +211,7 @@
         -1
       ],
       [
-        "KC_DELETE",
+        "TD(3)",
         "KC_TAB",
         -1,
         -1,
@@ -228,7 +228,7 @@
       ],
       [
         "M0",
-        "KC_SLCT",
+        "KC_BTN4",
         "KC_BTN2",
         "KC_BTN1",
         "KC_BTN3"
