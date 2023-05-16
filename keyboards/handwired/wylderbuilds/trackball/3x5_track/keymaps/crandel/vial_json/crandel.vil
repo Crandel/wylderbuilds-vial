@@ -94,7 +94,7 @@
         "KC_9",
         "KC_6",
         "KC_0",
-        "KC_BTN2"
+        "KC_BTN1"
       ],
       [
         -1,
@@ -107,7 +107,7 @@
         -1,
         "KC_DELETE",
         "KC_GESC",
-        "KC_BTN1",
+        "KC_BTN2",
         "TD(0)"
       ],
       [
@@ -118,11 +118,11 @@
         "M3"
       ],
       [
+        "TD(1)",
         "KC_LEFT",
         "KC_DOWN",
         "KC_UP",
-        "KC_RIGHT",
-        "TD(1)"
+        "KC_RIGHT"
       ],
       [
         "KC_F1",
@@ -139,7 +139,7 @@
         -1
       ],
       [
-        "KC_QUOTE",
+        "TD(3)",
         "KC_TAB",
         -1,
         -1,
@@ -183,25 +183,25 @@
         "TD(0)"
       ],
       [
-        "KC_MPRV",
+        "KC_EQUAL",
         "KC_LSHIFT",
         "KC_LCTRL",
-        "KC_MNXT",
-        "KC_EQUAL"
+        "KC_MPRV",
+        "KC_MNXT"
       ],
       [
+        "LSFT(KC_GRAVE)",
         "KC_LBRACKET",
         "LSFT(KC_9)",
         "LSFT(KC_0)",
-        "KC_RBRACKET",
-        "LSFT(KC_GRAVE)"
+        "KC_RBRACKET"
       ],
       [
-        "LSFT(KC_COMMA)",
+        "LSFT(KC_EQUAL)",
         "LSFT(KC_LBRACKET)",
-        "LSFT(KC_RBRACKET)",
+        "LSFT(KC_COMMA)",
         "LSFT(KC_DOT)",
-        "LSFT(KC_EQUAL)"
+        "LSFT(KC_RBRACKET)"
       ],
       [
         "KC_ENTER",
@@ -220,11 +220,11 @@
     ],
     [
       [
-        "KC_F9",
         "KC_BRID",
+        "KC_BRIU",
         "KC_VOLD",
         "KC_VOLU",
-        "KC_BRIU"
+        "KC_F9"
       ],
       [
         "M0",
@@ -256,24 +256,24 @@
       ],
       [
         "KC_PSCREEN",
+        "KC_F10",
         "KC_WH_D",
         "KC_WH_U",
-        "KC_F10",
         "KC_F11"
       ],
       [
+        "KC_F12",
         "KC_MS_L",
         "KC_MS_D",
         "KC_MS_U",
-        "KC_MS_R",
-        "KC_F12"
+        "KC_MS_R"
       ],
       [
+        "KC_INSERT",
         "KC_WBAK",
         "KC_PGDOWN",
         "KC_PGUP",
-        "KC_WFWD",
-        "KC_INSERT"
+        "KC_WFWD"
       ],
       [
         "KC_ENTER",
@@ -612,32 +612,32 @@
       "KC_TAB"
     ],
     [
-      "KC_3",
-      "KC_LEFT",
       "KC_NO",
       "KC_NO",
-      "KC_ESCAPE"
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
     ],
     [
-      "KC_F2",
-      "KC_BSLASH",
+      "KC_BTN2",
+      "KC_F1",
       "KC_NO",
       "KC_NO",
       "KC_TAB"
     ],
     [
-      "KC_W",
-      "KC_F",
-      "KC_P",
-      "KC_LGUI",
-      "RESET"
+      "KC_MINUS",
+      "KC_HOME",
+      "KC_NO",
+      "KC_NO",
+      "M2"
     ],
     [
-      "KC_L",
-      "KC_U",
-      "KC_Y",
-      "KC_ENTER",
-      "RESET"
+      "KC_0",
+      "KC_F2",
+      "KC_NO",
+      "KC_NO",
+      "KC_CAPSLOCK"
     ],
     [
       "KC_SPACE",
