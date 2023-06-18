@@ -114,5 +114,5 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            // -----------+--------|    |-------------+----------------|
                                   QK_BOOT, QK_GESC,           QK_BOOT,          KC_TAB
                            // -----------+--------|    |-------------+----------------|
-  ),
+  )
 };

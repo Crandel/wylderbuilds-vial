@@ -179,7 +179,7 @@
         -1,
         "KC_DELETE",
         "KC_GESC",
-        "TD(2)",
+        "KC_CAPSLOCK",
         "TD(0)"
       ],
       [
@@ -251,7 +251,7 @@
         -1,
         "RESET",
         "KC_GESC",
-        "TD(2)",
+        "KC_CAPSLOCK",
         "TD(0)"
       ],
       [
