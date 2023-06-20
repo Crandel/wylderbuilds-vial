@@ -83,14 +83,14 @@
         "KC_MINUS"
       ],
       [
-        "KC_BTN4",
+        "KC_BTN3",
         "KC_8",
         "KC_5",
         "KC_1",
         "KC_3"
       ],
       [
-        "KC_BTN3",
+        "KC_BTN4",
         "KC_9",
         "KC_6",
         "KC_0",
@@ -251,7 +251,7 @@
         -1,
         "RESET",
         "KC_GESC",
-        "KC_CAPSLOCK",
+        "TD(4)",
         "TD(0)"
       ],
       [
@@ -547,11 +547,11 @@
       220
     ],
     [
+      "KC_ACL0",
+      "KC_ACL2",
+      "KC_ACL1",
       "KC_NO",
-      "KC_NO",
-      "KC_NO",
-      "KC_NO",
-      560
+      220
     ],
     [
       "KC_NO",

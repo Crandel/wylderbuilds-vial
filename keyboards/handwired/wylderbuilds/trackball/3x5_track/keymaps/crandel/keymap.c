@@ -43,10 +43,16 @@ void keyboard_post_init_user(void) {
                                    KC_SLSH,
                                    KC_RBRC,
                                    TAP_TAPPING_TERM };
+    vial_tap_dance_entry_t td4 = { KC_ACL0,
+                                   KC_ACL2,
+                                   KC_ACL1,
+                                   KC_ACL1,
+                                   TAP_TAPPING_TERM };
     dynamic_keymap_set_tap_dance(0, &td0); // the first value corresponds to the TD(i) slot
     dynamic_keymap_set_tap_dance(1, &td1);
     dynamic_keymap_set_tap_dance(2, &td2);
     dynamic_keymap_set_tap_dance(3, &td3);
+    dynamic_keymap_set_tap_dance(4, &td4);
 }
 #endif // TAP_DANCE_ENABLE
 
@@ -110,7 +116,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+------------------+--------|    |--------+--------+--------+--------+--------|
                                   KC_LGUI,  KC_SPC,                             KC_ENT,
                            // -----------+--------|    |-------------+----------------|
-                                  KC_CAPS,   TD(0),                            KC_BSPC,
+                                    TD(4),   TD(0),                            KC_BSPC,
                            // -----------+--------|    |-------------+----------------|
                                   QK_BOOT, QK_GESC,           QK_BOOT,          KC_TAB
                            // -----------+--------|    |-------------+----------------|
