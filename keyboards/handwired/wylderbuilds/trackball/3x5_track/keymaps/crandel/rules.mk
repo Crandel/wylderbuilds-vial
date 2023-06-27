@@ -1,0 +1,8 @@
+COMBO_ENABLE     = yes
+CONSOLE_ENABLE   = yes
+EXTRAKEY_ENABLE  = yes
+QMK_SETTINGS     = yes
+TAP_DANCE_ENABLE = yes
+VIAL_ENABLE      = yes
+VIAL_INSECURE    = yes
+VIA_ENABLE       = yes
