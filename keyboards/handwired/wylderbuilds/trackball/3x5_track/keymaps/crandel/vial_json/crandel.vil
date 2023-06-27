@@ -77,7 +77,7 @@
     [
       [
         "KC_F5",
-        "RALT_T(KC_7)",
+        "LALT_T(KC_7)",
         "LCTL_T(KC_4)",
         "LSFT_T(KC_2)",
         "KC_MINUS"
@@ -184,13 +184,13 @@
       ],
       [
         "KC_EQUAL",
-        "KC_LSHIFT",
-        "KC_LCTRL",
-        "KC_MPRV",
-        "KC_MNXT"
+        "LSFT(KC_BSLASH)",
+        "KC_GRAVE",
+        "LSFT(KC_GRAVE)",
+        "LSFT(KC_SLASH)"
       ],
       [
-        "LSFT(KC_GRAVE)",
+        "KC_MUTE",
         "KC_LBRACKET",
         "LSFT(KC_9)",
         "LSFT(KC_0)",
@@ -946,10 +946,10 @@
     "6": 5000,
     "7": 600,
     "8": 0,
-    "9": 0,
-    "10": 20,
-    "11": 8,
-    "12": 7,
+    "9": 10,
+    "10": 10,
+    "11": 16,
+    "12": 500,
     "13": 60,
     "14": 0,
     "15": 80,
