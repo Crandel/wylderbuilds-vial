@@ -584,18 +584,18 @@
   ],
   "combo": [
     [
-      "KC_B",
-      "KC_J",
-      "KC_NO",
-      "KC_NO",
-      "M2"
-    ],
-    [
       "KC_H",
       "KC_D",
       "KC_NO",
       "KC_NO",
       "KC_CAPSLOCK"
+    ],
+    [
+      "KC_B",
+      "KC_J",
+      "KC_NO",
+      "KC_NO",
+      "M2"
     ],
     [
       "KC_G",
@@ -612,20 +612,6 @@
       "KC_ESCAPE"
     ],
     [
-      "KC_NO",
-      "KC_NO",
-      "KC_NO",
-      "KC_NO",
-      "KC_NO"
-    ],
-    [
-      "KC_BTN4",
-      "KC_F1",
-      "KC_NO",
-      "KC_NO",
-      "KC_TAB"
-    ],
-    [
       "KC_MINUS",
       "KC_HOME",
       "KC_NO",
@@ -633,11 +619,25 @@
       "M2"
     ],
     [
+      "KC_F2",
+      "KC_BTN4",
+      "KC_NO",
+      "KC_NO",
+      "KC_ESCAPE"
+    ],
+    [
       "KC_Q",
       "KC_SCOLON",
       "KC_NO",
       "KC_NO",
       "M4"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
     ],
     [
       "KC_NO",
@@ -939,7 +939,7 @@
   ],
   "settings": {
     "1": 0,
-    "2": 50,
+    "2": 75,
     "3": 0,
     "4": 175,
     "5": 5,
