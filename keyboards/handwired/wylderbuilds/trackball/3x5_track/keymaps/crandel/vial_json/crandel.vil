@@ -39,22 +39,22 @@
         "TD(0)"
       ],
       [
-        "KC_J",
-        "LSFT_T(KC_L)",
+        "KC_E",
+        "LSFT_T(KC_O)",
         "LCTL_T(KC_U)",
         "RALT_T(KC_Y)",
         "KC_SCOLON"
       ],
       [
         "KC_M",
-        "KC_N",
-        "KC_E",
-        "KC_I",
-        "KC_O"
+        "KC_H",
+        "KC_J",
+        "KC_K",
+        "KC_L"
       ],
       [
-        "KC_K",
-        "KC_H",
+        "KC_I",
+        "KC_N",
         "KC_COMMA",
         "KC_DOT",
         "KC_SLASH"
@@ -113,7 +113,7 @@
       [
         "KC_HOME",
         "LSFT_T(KC_END)",
-        "LSFT_T(KC_PGDOWN)",
+        "LCTL_T(KC_PGDOWN)",
         "RALT_T(KC_PGUP)",
         "M3"
       ],
@@ -592,7 +592,7 @@
     ],
     [
       "KC_B",
-      "KC_J",
+      "KC_E",
       "KC_NO",
       "KC_NO",
       "M2"
@@ -606,7 +606,7 @@
     ],
     [
       "KC_V",
-      "KC_K",
+      "KC_I",
       "KC_NO",
       "KC_NO",
       "KC_ESCAPE"
