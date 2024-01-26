@@ -2,6 +2,28 @@
 
 #pragma once
 
+#ifdef DEBUG_ENABLE
+#include "print.h"
+#endif
+
+// Disable options
+#ifndef DEBUG_ENABLE
+#ifndef NO_DEBUG
+#define NO_DEBUG
+#endif // !NO_DEBUG
+
+#ifndef NO_PRINT
+#define NO_PRINT
+#endif // !NO_PRINT
+#endif
+
+#undef LOCKING_SUPPORT_ENABLE
+#undef LOCKING_RESYNC_ENABLE
+#define NO_ACTION_ONESHOT
+#define NO_MUSIC_MODE
+#define LAYER_STATE_8BIT
+
+// Vial settings
 #define VIAL_KEYBOARD_UID {0xF6, 0x24, 0xF4, 0x83, 0xB1, 0x4B, 0xE2, 0xB4}
 
 #define VIAL_UNLOCK_COMBO_ROWS { 0, 3 }
@@ -10,17 +32,14 @@
 #define VIAL_TAP_DANCE_ENTRIES 9
 #define VIAL_COMBO_ENTRIES     9
 
+// Keyboard settings
 #define DYNAMIC_KEYMAP_LAYER_COUNT 6
 #define DYNAMIC_KEYMAP_MACRO_COUNT 12
 #define TAPPING_TERM 360
 #define TAPPING_TOGGLE 3
 #define PERMISSIVE_HOLD
 
-#define MASTER_RIGHT
-#undef PMW33XX_LIFTOFF_DISTANCE
-#define PMW33XX_LIFTOFF_DISTANCE 0x04
-#undef POINTING_DEVICE_TASK_THROTTLE_MS
-#define POINTING_DEVICE_TASK_THROTTLE_MS 2
+#define MASTER_LEFT
 
 /* Redefine default settings */
 #define SERIAL_USART_PIN_SWAP
@@ -31,6 +50,11 @@
 #define MATRIX_ROW_PINS { GP11, GP12, GP13, GP14, GP15 }
 
 /* Trackball settings*/
+#undef PMW33XX_LIFTOFF_DISTANCE
+#define PMW33XX_LIFTOFF_DISTANCE 0x04
+#undef POINTING_DEVICE_TASK_THROTTLE_MS
+#define POINTING_DEVICE_TASK_THROTTLE_MS 2
+
 #define TRACKBALL_DPI_OPTIONS { 1200, 1800, 2600, 3400 }
 #define CHARYBDIS_MINIMUM_DEFAULT_DPI 1200
 #define CHARYBDIS_MING_DPI 400

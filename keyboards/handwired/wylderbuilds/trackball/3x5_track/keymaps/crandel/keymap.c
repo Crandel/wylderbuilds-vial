@@ -1,71 +1,64 @@
 #include QMK_KEYBOARD_H
 #include "3x5_track.h"
 
-enum layers {
-  COLMAK_L = 0,
-  NUM_L = 1,
-  CHARS_L = 2,
-  MOUSE_L = 3,
-  GAME_L = 4,
-};
-#define TO_CLM DF(COLMAK_L)
-#define TO_NMB DF(NUM_L)
-#define TO_CHR DF(CHARS_L)
-#define TO_MOS DF(MOUSE_L)
-#define TO_GAM DF(GAME_L)
+#include "crd_keycodes.h"
 
+#include "crd_helpers.c"
+
+#ifdef LEADER_ENABLE
+#  include "crd_leader.c"
+#endif
 
 #ifdef TAP_DANCE_ENABLE
-#define TAP_TAPPING_TERM 220
-void keyboard_post_init_user(void) {
-#ifdef CONSOLE_ENABLE
-    debug_enable=true;
-    debug_matrix=true;
-    debug_keyboard=true;
-    debug_mouse=true;
-#endif // CONSOLE_ENABLE
-    vial_tap_dance_entry_t td0 = { TO_CLM,
-                                   TO_CHR,
-                                   TO_NMB,
-                                   TO_MOS,
-                                   TAP_TAPPING_TERM };
-    vial_tap_dance_entry_t td1 = { KC_DOT,
-                                   KC_QUOT,
-                                   KC_COMM,
-                                   LSFT(KC_SLSH),
-                                   TAP_TAPPING_TERM };
-    vial_tap_dance_entry_t td2 = { KC_BTN1,
-                                   KC_BTN3,
-                                   KC_BTN2,
-                                   KC_BTN4,
-                                   TAP_TAPPING_TERM };
-    vial_tap_dance_entry_t td3 = { KC_QUOT,
-                                   KC_LBRC,
-                                   KC_SLSH,
-                                   KC_RBRC,
-                                   TAP_TAPPING_TERM };
-    dynamic_keymap_set_tap_dance(0, &td0); // the first value corresponds to the TD(i) slot
-    dynamic_keymap_set_tap_dance(1, &td1);
-    dynamic_keymap_set_tap_dance(2, &td2);
-    dynamic_keymap_set_tap_dance(3, &td3);
-}
-#endif // TAP_DANCE_ENABLE
+#  include "crd_tapdance.c"
+#endif
 
+
+void set_lang(bool lng){
+  if (lng) {
+    tap_code(KC_CAPS);
+  } else {
+    tap_code16(S(KC_CAPS));
+  }
+}
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+  case V_US:
+    if (record->event.pressed) {
+      set_lang(true);
+    }
+    break;
+  case V_UK:
+    if (record->event.pressed) {
+      set_lang(false);
+    }
+    break;
+  }
+  return true;
+}
+
+void keyboard_post_init_user(void) {
+  // Call the post init code.
+  #ifdef TAP_DANCE_ENABLE
+  install_tap_dance_entries();
+  #endif
+}
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [COLMAK_L] = LAYOUT_3x5(
   //,-------------------------------------------------------.    ,---------------------------------------------------------------.
-      KC_Q, RALT_T(KC_W), LCTL_T(KC_F), LSFT_T(KC_P), KC_B,         KC_E, LSFT_T(KC_O), LCTL_T(KC_U), RALT_T(KC_Y),       KC_SCLN,
+      KC_Q, RALT_T(KC_W), LCTL_T(KC_F), LSFT_T(KC_P), KC_B,         KC_E, LSFT_T(KC_I), LCTL_T(KC_U), RALT_T(KC_Y),       KC_SCLN,
   //|-----+-------------+-------------+-------------+-------|    |------+-------------+-------------+-------------+--------------|
       KC_A,         KC_R,         KC_S,         KC_T, KC_G,         KC_M,         KC_H,         KC_J,         KC_K,          KC_L,
   //|-----+-------------+-------------+-------------+-------|    |------+-------------+-------------+-------------+--------------|
-      KC_Z,         KC_X,         KC_C,         KC_D, KC_V,         KC_I,         KC_N,      KC_COMM,       KC_DOT,       KC_SLSH,
+      KC_Z,         KC_X,         KC_C,         KC_D, KC_V,         KC_O,         KC_N,      KC_COMM,       KC_DOT,         TD(3),
   //|-----+-------------+-------------+-------------+-------|    |------+-------------+-------------+-------------+--------------|
                                              KC_LGUI, KC_SPC,                   KC_ENT,
                                       // -----------+-------|    |------+-------------|
-                                             KC_CAPS,  TD(0),                   KC_TAB,
+                                             KC_LEAD,  TD(0),                   KC_TAB,
                                       // -----------+-------|    |------+-------------|
-                                              KC_DEL,QK_GESC,       TD(3),     KC_BSPC
+                                              KC_DEL,QK_GESC,       TD(2),     KC_BSPC
                                       // -----------+-------|    |------+-------------|
   ),
 
@@ -73,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,---------------------------------------------------------.    ,------------------------------------------------------------------------.
       KC_F5, LALT_T(KC_7), LCTL_T(KC_4), LSFT_T(KC_2), KC_MINS,           KC_HOME,  LSFT_T(KC_END), LCTL_T(KC_PGDN),RALT_T(KC_PGUP), XXXXXXX,
   //|------+-------------+-------------+-------------+--------|    |-------------+----------------+----------------+---------------+--------|
-      KC_F4,        KC_8 ,        KC_5 ,        KC_1 ,    KC_3,             TD(1),         KC_LEFT,         KC_DOWN,          KC_UP,KC_RIGHT,
+      KC_F4,        KC_8 ,        KC_5 ,        KC_1 ,    KC_3,            KC_DOT,         KC_LEFT,         KC_DOWN,          KC_UP,KC_RIGHT,
   //|------+-------------+-------------+-------------+--------|    |-------------+----------------+----------------+---------------+--------|
       KC_F3,        KC_9 ,        KC_6 ,        KC_0 ,   KC_F2,           KC_BTN4,         KC_BTN1,         KC_BTN2,        KC_BTN3, KC_BSLS,
   //|------+-------------+-------------+-------------+--------|    |-------------+----------------+----------------+---------------+--------|
@@ -81,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                        // -----------+-- -----|    |-------------+----------------|
                                                 KC_F1,   TD(0),                             KC_TAB,
                                        // -----------+--------|    |-------------+----------------|
-                                               KC_DEL, QK_GESC,             TD(3),         KC_BSPC
+                                               KC_DEL, QK_GESC,             TD(2),         KC_BSPC
                                        // -----------+--------|    |-------------+----------------|
   ),
 
@@ -89,7 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,--------------------------------------------------------.    ,--------------------------------------------------------------------------.
         KC_F7, LSFT(KC_7), LSFT(KC_4), LSFT(KC_2),      KC_F8,             KC_EQL, LSFT(KC_BSLS),        KC_GRV, LSFT(KC_GRV),  LSFT(KC_SCLN),
   //|--------+-----------+-----------+-----------+-----------|    |--------------+--------------+--------------+-------------+---------------|
-      XXXXXXX, LSFT(KC_8), LSFT(KC_5), LSFT(KC_1), LSFT(KC_3),         KC_KB_MUTE,       KC_LBRC,    LSFT(KC_9),   LSFT(KC_0),        KC_RBRC,
+      XXXXXXX, LSFT(KC_8), LSFT(KC_5), LSFT(KC_1), LSFT(KC_3),           KC_LCTRL,       KC_LBRC,    LSFT(KC_9),   LSFT(KC_0),        KC_RBRC,
   //|--------+-----------+-----------+-----------+-----------|    |--------------+--------------+--------------+-------------+---------------|
       XXXXXXX,     KC_CUT, LSFT(KC_6),     KC_APP,    KC_PSTE,       LSFT(KC_EQL), LSFT(KC_LBRC),LSFT(KC_COMMA), LSFT(KC_DOT),  LSFT(KC_RBRC),
   //|--------+-----------+-----------+-----------+-----------|    |--------------+--------------+--------------+-------------+---------------|
@@ -97,7 +90,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                    // -----------+-----------|    |--------------+--------------|
                                           KC_LALT,      TD(0),                            KC_TAB,
                                    // -----------+-----------|    |--------------+--------------|
-                                          KC_LCTL,    QK_GESC,              TD(3),       KC_BSPC
+                                           KC_DEL,    QK_GESC,              TD(2),       KC_BSPC
                                    // -----------+-----------|    |--------------+--------------|
   ),
 
@@ -111,9 +104,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+------------------+--------|    |--------+--------+--------+--------+--------|
                                   KC_LGUI,  KC_SPC,                             KC_ENT,
                            // -----------+--------|    |-------------+----------------|
-                                    TD(4),   TD(0),                             KC_TAB,
+                                    TD(1),   TD(0),                             KC_TAB,
                            // -----------+--------|    |-------------+----------------|
-                                  QK_BOOT, QK_GESC,           QK_BOOT,         KC_BSPC
+                                  QK_BOOT,  TO_GAM,           QK_BOOT,         KC_BSPC
                            // -----------+--------|    |-------------+----------------|
+  ),
+
+  [GAME_L] = LAYOUT_3x5(
+  //,-------------------------------------.    ,-------------------------------------------.
+        KC_G, KC_Q,   KC_W,   KC_E,   KC_H,     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  //|-------+-----+-------+-------+-------|    |------+---------+--------+--------+--------|
+     KC_LSFT, KC_A,   KC_S,   KC_D,   KC_F,       KC_1,     KC_2,    KC_3,    KC_4,    KC_5,
+  //|-------+-----+-------+-------+-------|    |------+---------+--------+--------+--------|
+     KC_LCTL, KC_Z,   KC_X,   KC_C,   KC_V,       KC_6,     KC_7,    KC_8,    KC_9,    KC_0,
+  //|-------+-----+-------+-------+-------|    |------+---------+--------+--------+--------|
+                            KC_ENT, KC_SPC,               KC_ENT,
+                          //------+-------|    |- -----+--------|
+                            KC_TAB,  TD(0),               KC_TAB,
+                          //------+-------|    |-------+--------|
+                           KC_LALT, TO_GAM,     XXXXXXX, KC_BSPC
+                          // -----+-------|    |-------+--------|
   )
 };
