@@ -1,4 +1,7 @@
-/* SPDX-License-Identifier: GPL-2.0-or-later */
+/*
+Copyright 2023 Vitalii Drevenchuk <@Crandel>
+SPDX-License-Identifier: GPL-2.0-or-later
+*/
 
 #pragma once
 
@@ -35,11 +38,20 @@
 // Keyboard settings
 #define DYNAMIC_KEYMAP_LAYER_COUNT 6
 #define DYNAMIC_KEYMAP_MACRO_COUNT 12
-#define TAPPING_TERM 360
+
+#define TAPPING_TERM   260
 #define TAPPING_TOGGLE 3
 #define PERMISSIVE_HOLD
 
+/* Select hand configuration */
+
 #define MASTER_LEFT
+// #define MASTER_RIGHT
+
+#ifdef LEADER_ENABLE
+#  define LEADER_NO_TIMEOUT
+#  define LEADER_PER_KEY_TIMING
+#endif
 
 /* Redefine default settings */
 #define SERIAL_USART_PIN_SWAP
