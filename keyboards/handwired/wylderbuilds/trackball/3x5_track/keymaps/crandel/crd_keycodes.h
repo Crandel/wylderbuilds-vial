@@ -9,7 +9,7 @@ enum layers {
 };
 
 enum virtual_keycodes {
-    V_US = SAFE_RANGE,
+    V_US = QK_KB_0,
     V_UK,
 };
 
