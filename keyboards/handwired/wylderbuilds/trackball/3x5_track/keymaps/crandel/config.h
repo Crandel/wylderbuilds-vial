@@ -47,7 +47,7 @@ SPDX-License-Identifier: GPL-2.0-or-later
 
 #define MASTER_LEFT
 // #define MASTER_RIGHT
-/* #undef SPLIT_HAND_PIN */
+#undef SPLIT_HAND_PIN
 
 #ifdef LEADER_ENABLE
 #  define LEADER_NO_TIMEOUT
