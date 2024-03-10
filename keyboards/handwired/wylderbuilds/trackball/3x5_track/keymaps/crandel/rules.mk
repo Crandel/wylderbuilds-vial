@@ -8,6 +8,7 @@ LTO_ENABLE          = yes
 MAGIC_ENABLE        = no
 MIDI_ENABLE         = no
 MOUSEKEY_ENABLE     = yes # Mouse keys
+# MOUSE_SHARED_EP     = no
 NKRO_ENABLE         = yes  # Enable N-Key Rollover
 OLED_ENABLE         = no
 QMK_SETTINGS        = yes

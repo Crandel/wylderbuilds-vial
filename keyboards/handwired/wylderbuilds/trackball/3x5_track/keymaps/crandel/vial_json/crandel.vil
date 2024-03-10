@@ -61,14 +61,14 @@
       ],
       [
         "KC_ENTER",
-        "KC_TAB",
+        "KC_BSPACE",
         -1,
         -1,
         -1
       ],
       [
         "TD(2)",
-        "KC_BSPACE",
+        "KC_TAB",
         -1,
         -1,
         -1
@@ -133,14 +133,14 @@
       ],
       [
         "KC_ENTER",
-        "KC_TAB",
+        "KC_BSPACE",
         -1,
         -1,
         -1
       ],
       [
         "TD(2)",
-        "KC_BSPACE",
+        "KC_TAB",
         -1,
         -1,
         -1
@@ -205,14 +205,14 @@
       ],
       [
         "KC_ENTER",
-        "KC_TAB",
+        "KC_BSPACE",
         -1,
         -1,
         -1
       ],
       [
         "TD(2)",
-        "KC_BSPACE",
+        "KC_TAB",
         -1,
         -1,
         -1
@@ -277,14 +277,14 @@
       ],
       [
         "KC_ENTER",
-        "KC_TAB",
+        "KC_BSPACE",
         -1,
         -1,
         -1
       ],
       [
         "RESET",
-        "KC_BSPACE",
+        "KC_TAB",
         -1,
         -1,
         -1
@@ -349,14 +349,14 @@
       ],
       [
         "KC_ENTER",
-        "KC_TAB",
+        "KC_BSPACE",
         -1,
         -1,
         -1
       ],
       [
         "KC_NO",
-        "KC_BSPACE",
+        "KC_TAB",
         -1,
         -1,
         -1
