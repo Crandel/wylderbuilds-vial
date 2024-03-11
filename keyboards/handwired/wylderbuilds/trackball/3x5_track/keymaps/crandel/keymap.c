@@ -3,8 +3,6 @@
 
 #include "crd_keycodes.h"
 
-#include "crd_helpers.c"
-
 #ifdef LEADER_ENABLE
 #  include "crd_leader.c"
 #endif
@@ -56,9 +54,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|-----+-------------+-------------+-------------+-------|    |------+-------------+-------------+-------------+--------------|
                                              KC_LGUI, KC_SPC,                   KC_ENT,
                                       // -----------+-------|    |------+-------------|
-                                             QK_LEAD,  TD(0),                  KC_BSPC,
+                                              KC_DEL,  TD(0),                  KC_BSPC,
                                       // -----------+-------|    |------+-------------|
-                                              KC_DEL,QK_GESC,       TD(2),      KC_TAB
+                                             QK_GESC,QK_LEAD,       TD(2),      KC_TAB
                                       // -----------+-------|    |------+-------------|
   ),
 
@@ -74,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                        // -----------+-- -----|    |-------------+----------------|
                                                 KC_F1,   TD(0),                            KC_BSPC,
                                        // -----------+--------|    |-------------+----------------|
-                                               KC_DEL, QK_GESC,             TD(2),          KC_TAB
+                                               KC_DEL, QK_LEAD,             TD(2),          KC_TAB
                                        // -----------+--------|    |-------------+----------------|
   ),
 

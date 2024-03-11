@@ -36,7 +36,7 @@ void install_tap_dance_entries(void) {
                                    LSFT(KC_SLSH),
                                    KC_RBRC,
                                    TAP_TAPPING_TERM };
-    vial_tap_dance_entry_t td3 = { KC_SLASH, // / . , backslash
+    vial_tap_dance_entry_t td3 = { KC_SLSH, // / . , backslash
                                    KC_DOT,
                                    KC_COMM,
                                    KC_BSLS,

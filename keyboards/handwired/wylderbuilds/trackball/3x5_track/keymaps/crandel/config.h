@@ -32,8 +32,8 @@ SPDX-License-Identifier: GPL-2.0-or-later
 #define VIAL_UNLOCK_COMBO_ROWS { 0, 3 }
 #define VIAL_UNLOCK_COMBO_COLS { 0, 3 }
 
-#define VIAL_TAP_DANCE_ENTRIES 9
-#define VIAL_COMBO_ENTRIES     9
+#define VIAL_TAP_DANCE_ENTRIES 15
+#define VIAL_COMBO_ENTRIES     15
 
 // Keyboard settings
 #define DYNAMIC_KEYMAP_LAYER_COUNT 6
@@ -47,7 +47,7 @@ SPDX-License-Identifier: GPL-2.0-or-later
 
 #define MASTER_LEFT
 // #define MASTER_RIGHT
-#undef SPLIT_HAND_PIN
+#undef SPLIT_USB_DETECT
 
 #ifdef LEADER_ENABLE
 #  define LEADER_NO_TIMEOUT
@@ -63,7 +63,6 @@ SPDX-License-Identifier: GPL-2.0-or-later
 #define MATRIX_ROW_PINS { GP11, GP12, GP13, GP14, GP15 }
 
 /* Trackball settings*/
-#undef POINTING_DEVICE_ENABLE
 /* #undef PMW33XX_LIFTOFF_DISTANCE */
 /* #define PMW33XX_LIFTOFF_DISTANCE 0x04 */
 /* #undef POINTING_DEVICE_TASK_THROTTLE_MS */
