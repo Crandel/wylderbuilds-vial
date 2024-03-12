@@ -669,46 +669,46 @@
       "M3"
     ],
     [
+      "KC_B",
+      "KC_M",
       "KC_NO",
       "KC_NO",
-      "KC_NO",
-      "KC_NO",
-      "KC_NO"
+      "KC_DELETE"
     ],
     [
+      "KC_G",
+      "KC_E",
       "KC_NO",
       "KC_NO",
-      "KC_NO",
-      "KC_NO",
-      "KC_NO"
+      "KC_GRAVE"
     ],
     [
+      "KC_B",
+      "KC_O",
       "KC_NO",
       "KC_NO",
-      "KC_NO",
-      "KC_NO",
-      "KC_NO"
+      "KC_EQUAL"
     ],
     [
+      "KC_V",
+      "KC_E",
       "KC_NO",
       "KC_NO",
-      "KC_NO",
-      "KC_NO",
-      "KC_NO"
+      "RSFT(KC_EQUAL)"
     ],
     [
+      "KC_A",
+      "KC_L",
       "KC_NO",
       "KC_NO",
-      "KC_NO",
-      "KC_NO",
-      "KC_NO"
+      "RSFT(KC_QUOTE)"
     ],
     [
+      "KC_A",
+      "KC_S",
+      "KC_L",
       "KC_NO",
-      "KC_NO",
-      "KC_NO",
-      "KC_NO",
-      "KC_NO"
+      "KC_QUOTE"
     ],
     [
       "KC_NO",
