@@ -8,18 +8,13 @@ SPDX-License-Identifier: GPL-2.0-or-later
 #ifdef DEBUG_ENABLE
 #include "print.h"
 #endif
-
 // Disable options
-#ifndef DEBUG_ENABLE
 #ifndef NO_DEBUG
 #define NO_DEBUG
 #endif // !NO_DEBUG
-
 #ifndef NO_PRINT
 #define NO_PRINT
 #endif // !NO_PRINT
-#endif
-
 #undef LOCKING_SUPPORT_ENABLE
 #undef LOCKING_RESYNC_ENABLE
 #define NO_ACTION_ONESHOT
@@ -36,18 +31,15 @@ SPDX-License-Identifier: GPL-2.0-or-later
 #define VIAL_COMBO_ENTRIES     15
 
 // Keyboard settings
-#define DYNAMIC_KEYMAP_LAYER_COUNT 6
-#define DYNAMIC_KEYMAP_MACRO_COUNT 12
+#define DYNAMIC_KEYMAP_LAYER_COUNT 10
+#define DYNAMIC_KEYMAP_MACRO_COUNT 15
 
 #define TAPPING_TERM   260
 #define TAPPING_TOGGLE 3
 #define PERMISSIVE_HOLD
 
 /* Select hand configuration */
-
-#define MASTER_LEFT
-// #define MASTER_RIGHT
-#undef SPLIT_USB_DETECT
+#define USB_VBUS_PIN GP26
 
 #ifdef LEADER_ENABLE
 #  define LEADER_NO_TIMEOUT

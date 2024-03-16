@@ -16,10 +16,9 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-#include "crd_keycodes.h"
 #include QMK_KEYBOARD_H
 
-#define TAP_TAPPING_TERM 220
+#define TAP_TAPPING_TERM 260
 void install_tap_dance_entries(void) {
     vial_tap_dance_entry_t td0 = { TO_CLM, // Change layers
                                    TO_CHR,
